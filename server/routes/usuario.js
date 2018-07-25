@@ -2,10 +2,11 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const _ = require('underscore');
 const Usuario = require('../models/usuario');
+const { verificarToken } = require('../middlewares/autenticacion');
 const app = express();
 
-
-app.get('/usuario', function(req, res) {
+//uso de middelware para validar el token
+app.get('/usuario', verificarToken, (req, res) => {
     let desde = req.query.desde || 0;
     let hasta = req.query.hasta || 5;
     desde = Number(desde);

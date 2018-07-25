@@ -9,6 +9,17 @@ process.env.PORT = process.env.PORT || 3000;
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
 //================================
+//Vencimieno token
+//================================
+process.env.CADUCIDAD_TOKEN = '2h'
+
+//================================
+//Clave secreta
+//================================
+process.env.CLAVE_SECRETA = process.env.CLAVE_SECRETA || 'EntornoDllo'
+
+
+//================================
 //Base de datos
 //================================
 let urlDb
